@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+.pytest_cache/
+.gltest-artifacts/
+*.pyc
+*.pem
+*.key
+node_modules/
+deployments/*-private*

@@ -1,0 +1,138 @@
+{
+  "ctor": {
+    "params": [
+      [
+        "auditor",
+        "address"
+      ]
+    ],
+    "kwparams": {}
+  },
+  "methods": {
+    "attest_evidence": {
+      "params": [
+        [
+          "plan_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "evaluate_readiness": {
+      "params": [
+        [
+          "plan_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "get_config": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "get_event": {
+      "params": [
+        [
+          "sequence",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "get_package": {
+      "params": [
+        [
+          "plan_id",
+          "string"
+        ],
+        [
+          "attempt",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "get_plan": {
+      "params": [
+        [
+          "plan_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "get_receipt": {
+      "params": [
+        [
+          "plan_id",
+          "string"
+        ],
+        [
+          "attempt",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "get_status": {
+      "params": [
+        [
+          "plan_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "lock_requirements": {
+      "params": [
+        [
+          "plan_id",
+          "string"
+        ],
+        [
+          "policy_json",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "submit_evidence": {
+      "params": [
+        [
+          "plan_id",
+          "string"
+        ],
+        [
+          "manifest_json",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    }
+  }
+}

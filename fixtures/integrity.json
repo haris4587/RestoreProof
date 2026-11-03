@@ -1,0 +1,1 @@
+{"application_checks_passed":true,"checksum_verified":true,"kind":"integrity","narrative":"Backup object checksum matched its committed checksum. Recovered reservation row counts, foreign keys and application booking queries passed validation after restoration.","observed_at":1793699000,"organization":"demo-hotel","scenario":"region-loss","system":"booking","test_id":"dr-001"}

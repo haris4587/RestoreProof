@@ -1,0 +1,1 @@
+{"as_of":1793700000,"max_age_seconds":604800,"organization":"demo-hotel","publisher":"haris4587/RestoreProof","requirements":[{"id":"booking-db","rpo_seconds":300,"rto_seconds":1800,"scenario":"region-loss","system":"booking"}]}
