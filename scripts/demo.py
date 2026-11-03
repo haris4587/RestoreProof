@@ -74,7 +74,10 @@ def main():
         if event['plan_id'] == a.plan:
             events.append(event)
     save(out / 'events.json', events)
-    save(out / 'status.json', json.loads(c.read_contract(address=address, function_name='get_status', args=[a.plan])))
+    status = json.loads(c.read_contract(address=address, function_name='get_status', args=[a.plan]))
+    save(out / 'status.json', status)
+    if not events or events[-1]['event_hash'] != status['head']:
+        raise RuntimeError('Exported history does not match on-chain event head')
     from verify_receipt import verify
     print(receipt['outcome'], verify(receipt, events), flush=True)
 

@@ -1,0 +1,57 @@
+{
+  "as_of": 1793700000,
+  "attempt": 0,
+  "auditor": "0x77e870bD4448620071d3A8F1de8b89Dfb743236b",
+  "decision_hash": "e27ef19dd3fea5481afbf6625497b481af062b562eab693eba29931a35c638f7",
+  "manifest_hash": "4d7af9d21bf2af74f615b13e089b1ea7d6290464a3d03dc427047b7c0596d285",
+  "outcome": "RECOVERY_READY",
+  "plan_id": "demo-ready-001",
+  "policy_hash": "9daec889c0e38d218bcc44fc442b9ba734ccb6cbaffbf6f1542f1e617765c294",
+  "previous_event_hash": "d69bfc8940b9f61b2d6a9afa9ccbe59352dbcb7089d55af1f3adf593008c0301",
+  "result": {
+    "checks": [
+      {
+        "document": 0,
+        "quote": "The booking service was restored in the isolated recovery region. Operators verified usable recovered guest reservations through application queries.",
+        "reason": "Records completed service restoration, verified usable recovered data, and credible start/restoration/checkpoint timestamps within policy bounds.",
+        "state": "SUPPORTED"
+      },
+      {
+        "document": 1,
+        "quote": "Backup object checksum matched its committed checksum. Recovered reservation row counts, foreign keys and application booking queries passed validation after restoration.",
+        "reason": "Includes both backup checksum validation and recovered application/data validation for the booking system.",
+        "state": "SUPPORTED"
+      },
+      {
+        "document": 2,
+        "quote": "Operators completed the region-loss recovery exercise in a production-like isolated environment with representative booking volume and dependency failover; the service passed the end-to-end recovery test.",
+        "reason": "Documents an actual completed production-like recovery exercise for the region-loss scenario, not a tabletop or future plan.",
+        "state": "SUPPORTED"
+      },
+      {
+        "document": 3,
+        "quote": "Responsible operator: DR on-call. 1. Declare region loss and isolate old writers. 2. Start network and identity dependencies in recovery region. 3. Verify backup checksum, restore database, replay durable logs. 4. Start booking service; validate guest reservation queries and sample writes. 5. If validation fails, isolate recovery service, roll back routing and escalate to incident commander.",
+        "reason": "Runbook has ordered executable steps, responsible operator, dependencies, rollback/escalation, and booking-specific validation.",
+        "state": "SUPPORTED"
+      }
+    ],
+    "decision": {
+      "outcome": "RECOVERY_READY",
+      "requirements": [
+        {
+          "requirement_id": "booking-db",
+          "status": "READY",
+          "tests": [
+            {
+              "rpo_seconds": 120,
+              "rto_seconds": 1200,
+              "status": "READY",
+              "test_id": "dr-001"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "version": "restoreproof/1"
+}

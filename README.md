@@ -19,11 +19,15 @@ Fresh failure takes precedence even if another test succeeds. Stale evidence can
 
 ## Live demonstration
 
+[![RestoreProof checks](https://github.com/haris4587/RestoreProof/actions/workflows/ci.yml/badge.svg)](https://github.com/haris4587/RestoreProof/actions/workflows/ci.yml)
+
 - Network: **Studionet**, chain **61999** (hosted development network).
 - Contract: [`0xd2e3a3f5c5db35a26C5F20E8930eA908BdC23a70`](https://explorer-studio.genlayer.com/contracts/0xd2e3a3f5c5db35a26C5F20E8930eA908BdC23a70)
-- Deployment: [`0xa6ed3c893c2c206ab7e123c6aeb4dc7809460e741dfc09e14486de919bfe5472`](https://explorer-studio.genlayer.com/tx/0xa6ed3c893c2c206ab7e123c6aeb4dc7809460e741dfc09e14486de919bfe5472)
+- Deployment (FINALIZED): [`0xa6ed3c893c2c206ab7e123c6aeb4dc7809460e741dfc09e14486de919bfe5472`](https://explorer-studio.genlayer.com/tx/0xa6ed3c893c2c206ab7e123c6aeb4dc7809460e741dfc09e14486de919bfe5472)
 - Source SHA-256: `acb9ad7ecc5ddef4736e353318c199268e3118b2dd91a50de56d230915771814`.
 - Evidence is pinned to commit `59a591374cf6afe5257db4438c57d887ec07004f`; the sample describes a synthetic hotel booking database recovery.
+
+The synthetic `demo-ready-001` assessment **FINALIZED as RECOVERY_READY** with majority agreement. RTO was **1,200 / 1,800 seconds**, RPO **120 / 300 seconds**, and all four evidence checks were supported. [Assessment transaction](https://explorer-studio.genlayer.com/tx/0x8ec9b147f42d157a101605ca27ff4837616d700897d00023d40c80eab6063e0f) · [receipt](deployments/demo-ready-001/assessment.json) · [event history](deployments/demo-ready-001/events.json). This is a demonstration using fabricated sample records, not a real hotel readiness certification.
 
 See [deployment instructions](DEPLOYMENT.md), [evidence format](EVIDENCE.md), [security assumptions](SECURITY.md), and [submission notes](SUBMISSION.md). Public deployment records are in `deployments/`.
 

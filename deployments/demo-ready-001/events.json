@@ -1,0 +1,54 @@
+[
+  {
+    "action": "LOCK",
+    "actor": "0x78Ec34276Bc5fAe2f8035579f1359D942a28ef90",
+    "event_hash": "04c526f15f61548560dd6a038b36fe3774aa6e46da1a8014d4112aabe21569f4",
+    "payload": {
+      "policy_hash": "9daec889c0e38d218bcc44fc442b9ba734ccb6cbaffbf6f1542f1e617765c294"
+    },
+    "plan_id": "demo-ready-001",
+    "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "sequence": 0,
+    "version": "restoreproof/1"
+  },
+  {
+    "action": "SUBMIT",
+    "actor": "0x78Ec34276Bc5fAe2f8035579f1359D942a28ef90",
+    "event_hash": "cb0829d051eb84e16a4e3c4f8bff57b6a712c27eddc035ec51595c76afb01fad",
+    "payload": {
+      "attempt": 0,
+      "manifest_hash": "4d7af9d21bf2af74f615b13e089b1ea7d6290464a3d03dc427047b7c0596d285"
+    },
+    "plan_id": "demo-ready-001",
+    "previous_hash": "04c526f15f61548560dd6a038b36fe3774aa6e46da1a8014d4112aabe21569f4",
+    "sequence": 1,
+    "version": "restoreproof/1"
+  },
+  {
+    "action": "ATTEST",
+    "actor": "0x77e870bD4448620071d3A8F1de8b89Dfb743236b",
+    "event_hash": "d69bfc8940b9f61b2d6a9afa9ccbe59352dbcb7089d55af1f3adf593008c0301",
+    "payload": {
+      "manifest_hash": "4d7af9d21bf2af74f615b13e089b1ea7d6290464a3d03dc427047b7c0596d285",
+      "policy_hash": "9daec889c0e38d218bcc44fc442b9ba734ccb6cbaffbf6f1542f1e617765c294"
+    },
+    "plan_id": "demo-ready-001",
+    "previous_hash": "cb0829d051eb84e16a4e3c4f8bff57b6a712c27eddc035ec51595c76afb01fad",
+    "sequence": 2,
+    "version": "restoreproof/1"
+  },
+  {
+    "action": "ASSESS",
+    "actor": "0x78Ec34276Bc5fAe2f8035579f1359D942a28ef90",
+    "event_hash": "7db84bbedac47be2bb232985498ac84eac9f2f035087d2836b9d5c8327d5d964",
+    "payload": {
+      "attempt": 0,
+      "decision_hash": "e27ef19dd3fea5481afbf6625497b481af062b562eab693eba29931a35c638f7",
+      "outcome": "RECOVERY_READY"
+    },
+    "plan_id": "demo-ready-001",
+    "previous_hash": "d69bfc8940b9f61b2d6a9afa9ccbe59352dbcb7089d55af1f3adf593008c0301",
+    "sequence": 3,
+    "version": "restoreproof/1"
+  }
+]
