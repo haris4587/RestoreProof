@@ -1,0 +1,25 @@
+name: RestoreProof checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    env:
+      GENVM_VERSION: v0.2.16
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements-dev.txt
+      - run: genvm-lint check contracts/restore_proof.py
+      - run: genvm-lint typecheck contracts/restore_proof.py
+      - run: pytest -q tests --junitxml=artifacts/junit.xml
+      - run: genvm-lint schema contracts/restore_proof.py --output artifacts/abi.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: validation-results
+          path: artifacts/

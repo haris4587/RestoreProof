@@ -1,0 +1,17 @@
+{
+  "hash": "0xa6ed3c893c2c206ab7e123c6aeb4dc7809460e741dfc09e14486de919bfe5472",
+  "from_address": "0x78Ec34276Bc5fAe2f8035579f1359D942a28ef90",
+  "to_address": "0xd2e3a3f5c5db35a26C5F20E8930eA908BdC23a70",
+  "status": 5,
+  "status_name": "ACCEPTED",
+  "result_name": "MAJORITY_AGREE",
+  "votes": {
+    "0x4441Ebe37E72c039B73f1D6CF8C6DEe277FE547a": "idle",
+    "0x5D9Ee6E9aAF2F0b739314A52dd9Da57cd8866dA8": "idle",
+    "0x63d72fE364368491E62a42B9C73c317Ce1ca8434": "agree",
+    "0xb04cdDC4a6Ff6A0aDF715cfe00Fa307b901cebD4": "agree",
+    "0xcab45E3fe9cC9592B5C378E47734E022b7Df80c9": "agree"
+  },
+  "source_sha256": "acb9ad7ecc5ddef4736e353318c199268e3118b2dd91a50de56d230915771814",
+  "contract_address": "0xd2e3a3f5c5db35a26C5F20E8930eA908BdC23a70"
+}
